@@ -33,7 +33,6 @@ export class HomePage implements OnInit {
   changeObjekt(){
     console.log('selected Object',this.currentObjektId);
     
-    this.currentGebId
     for(let r = 0; r < this.geb.length; r++) {
       if(this.geb[r].objekt_id==this.currentObjektId) this.currentGebId=this.geb[r].id;
     }
@@ -68,9 +67,9 @@ export class HomePage implements OnInit {
 
 			
 			this.objekte=[
-				{id: "1",kurzname: 'Obj1', online_id: 0, admin: 0,bilder: 0},
-				{id: "2",kurzname: 'Obj2', online_id: 0, admin: 0,bilder: 0},
-				{id: "3",kurzname: 'Obj3', online_id: 0, admin: 0,bilder: 0},
+				{id: 1,kurzname: 'Obj1', online_id: 0, admin: 0,bilder: 0},
+				{id: 2,kurzname: 'Obj2', online_id: 0, admin: 0,bilder: 0},
+				{id: 3,kurzname: 'Obj3', online_id: 0, admin: 0,bilder: 0},
 				];
 			resolve(true);
 
@@ -87,8 +86,9 @@ export class HomePage implements OnInit {
 				{id: 1,bezeichnung: 'G11', online_id: 0,objekt_id: 1,bilder: 0},
 				{id: 2,bezeichnung: 'G21', online_id: 0,objekt_id: 2,bilder: 0},
 				{id: 3,bezeichnung: 'G31', online_id: 0,objekt_id: 3,bilder: 0},
-				];
-		
+			];
+    
+      this.selectObjekt();
 	}
 
 }
